@@ -1,26 +1,21 @@
 /**
  * The entry point
  */
-
 import App from './components/app'
-import {getUserFollowers} from "./api/requests";
+import { getUserFollowers } from "./api/requests";
 
-
-
-
+// Функция для обновления имени и рендеринга фолловеров
 const updateName = (app, name) => {
-    const followers = getUserFollowers(name)
-    app.render(name, followers)
-}
-
+    const followers = getUserFollowers(name);
+    app.render(name, followers);
+};
 
 window.addEventListener('load', () => {
-  const app = new App(document.getElementById('app'))
-  const input = document.getElementById('input')
+    const app = new App(document.getElementById('app'))
+    const input = document.getElementById('input')
 
-  input.oninput = (e) => updateName(app, e.target.value)
-  
-  // Дефолтное значение для username
-  updateName(app, "x4nth055")
-  
-})
+    input.oninput = (e) => updateName(app, e.target.value);
+
+    // Дефолтное значение для username
+    updateName(app, "Kampotte");
+});
