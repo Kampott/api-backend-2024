@@ -1,1 +1,5 @@
 backend/config.py
+backend/venv/*
+backend/__pycache__/*
+start_command.txt
+frontend/node_modules/*
